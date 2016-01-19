@@ -1,0 +1,7 @@
+{
+	"name": "ASP.NET",
+	"private": true,
+  "dependencies": {
+    "startbootstrap-sb-admin-2": "*"
+  }
+}

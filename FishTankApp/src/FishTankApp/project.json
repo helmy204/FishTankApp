@@ -1,12 +1,19 @@
-﻿{
+{
   "version": "1.0.0-*",
+  "authors": [ "Roland", "John", "Helmy" ],
   "compilationOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final"
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "AutoMapper": "4.1.1",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+    "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final"
   },
 
   "commands": {
@@ -25,5 +32,10 @@
   "publishExclude": [
     "**.user",
     "**.vspscc"
-  ]
+  ],
+
+  "configurations": {
+    "Debug": { "compilationOptions": { "allowUnsafe": true } },
+    "test": { "compilationOptions": { "allowUnsafe": true } }
+  }
 }
