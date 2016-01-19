@@ -19,7 +19,7 @@ paths.fontAwesomeCss = "./bower_components/font-awesome/css/font-awesome.css";
 paths.morrisCss = "./bower_components/morrisjs/morris.css";
 
 paths.jqueryJs = "./bower_components/jquery/dist/jquery.js";
-paths.raphaelJs = "./bower_compnents/raphael/raphael.js";
+paths.raphaelJs = "./bower_components/raphael/raphael.js";
 paths.morrisJs = "./bower_components/morrisjs/morris.js";
 
 paths.fonts = "./bower_components/font-awesome/fonts/*";
