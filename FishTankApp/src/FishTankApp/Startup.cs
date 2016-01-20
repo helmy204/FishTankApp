@@ -8,6 +8,8 @@ using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using FishTankApp.Services;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
+using FishTankApp.Options;
 
 namespace FishTankApp
 {
@@ -24,6 +26,13 @@ namespace FishTankApp
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var configBuilder = new ConfigurationBuilder()
+                .AddJsonFile("alertThresholds.json")
+                .AddJsonFile($"alertThresholds{hostingEnvironment.EnvironmentName}.json", optional: true);
+            var config = configBuilder.Build();
+
+            services.Configure<ThresholdOptions>(config);
+
             services.AddMvc();
 
             services.AddSingleton<IViewModelService, ViewModelService>();
